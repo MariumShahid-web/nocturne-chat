@@ -1,0 +1,6 @@
+{
+  "name": "Nocturne Chat",
+  "description": "Intimate nocturnal group messaging with atmospheric layering and oceanic bioluminescent clarity.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

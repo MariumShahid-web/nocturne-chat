@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-nocturne-base: #071B2B;
+  --color-nocturne-submerged: #0B2438;
+  --color-nocturne-incoming: #0E2A40;
+  --color-nocturne-floating: #10314A;
+  --color-nocturne-teal: #167D8D;
+  --color-nocturne-ice: #B9E4E8;
+  --color-nocturne-text: #EEEEEE;
+  --color-nocturne-online: #00D68F;
+  --color-nocturne-dnd: #FF5C5C;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    background-color: #071B2B;
+    color: #EEEEEE;
+    font-family: var(--font-sans);
+    letter-spacing: 0.005em;
+  }
+
+  /* Custom sleek nocturnal scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(185, 228, 232, 0.14);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(22, 125, 141, 0.45);
+  }
+}
+
+.nocturne-halo {
+  box-shadow: 0 8px 32px -4px rgba(22, 125, 141, 0.18);
+}
+
+.nocturne-glass {
+  background-color: rgba(16, 49, 74, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.nocturne-dock-glass {
+  background-color: rgba(7, 27, 43, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.squircle {
+  border-radius: 28%;
+}
+
+.tabular-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
